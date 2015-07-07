@@ -32,7 +32,7 @@ public class BookFragment extends android.support.v4.app.Fragment {
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.layout_assignment1, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.layout_new_book, container, false);
 
         return root;
     }

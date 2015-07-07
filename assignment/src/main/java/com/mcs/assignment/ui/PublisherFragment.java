@@ -33,7 +33,7 @@ public class PublisherFragment extends android.support.v4.app.Fragment implement
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.layout_assignment2, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.layout_new_publisher, container, false);
 
         return root;
     }

@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.mcs.assignment.R;
 import com.mcs.assignment.ui.HomeActivity;
-import com.mcs.assignment.ui.UrlListActivity;
 
 import java.util.ArrayList;
 
@@ -20,7 +19,7 @@ import java.util.ArrayList;
  *
  * @author erangaeb@gmail.com (eranga herath)
  */
-public class UrlListAdapter extends BaseAdapter {
+public class PusthakayaListAdapter extends BaseAdapter {
 
     private HomeActivity activity;
     private ArrayList<String> urlList;
@@ -31,7 +30,7 @@ public class UrlListAdapter extends BaseAdapter {
     /**
      * Initialize context variables
      */
-    public UrlListAdapter(HomeActivity activity, ArrayList<String> urlList) {
+    public PusthakayaListAdapter(HomeActivity activity, ArrayList<String> urlList) {
         this.activity = activity;
         this.urlList = urlList;
 

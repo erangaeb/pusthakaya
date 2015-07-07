@@ -43,7 +43,7 @@ public class Assignment5aFragment extends Fragment implements View.OnClickListen
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.layout_assignment5a, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.layout_publishers, container, false);
 
         return root;
     }

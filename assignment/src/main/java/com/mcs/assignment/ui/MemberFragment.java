@@ -31,7 +31,7 @@ public class MemberFragment extends Fragment implements View.OnClickListener {
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.layout_assignment3, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.layout_new_member, container, false);
 
         return root;
     }

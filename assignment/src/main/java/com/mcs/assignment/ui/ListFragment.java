@@ -6,14 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mcs.assignment.R;
-import com.mcs.assignment.adapters.UrlListAdapter;
+import com.mcs.assignment.adapters.PusthakayaListAdapter;
 
 import java.util.ArrayList;
 
@@ -25,7 +21,7 @@ import java.util.ArrayList;
 public class ListFragment extends Fragment implements View.OnClickListener {
 
     // use to populate list
-    private UrlListAdapter adapter;
+    private PusthakayaListAdapter adapter;
     private ListView urlListView;
 
     private ArrayList<String> list;
@@ -76,7 +72,7 @@ public class ListFragment extends Fragment implements View.OnClickListener {
      * Create url list
      */
     private void initUrlList() {
-        adapter = new UrlListAdapter((HomeActivity) getActivity(), list);
+        adapter = new PusthakayaListAdapter((HomeActivity) getActivity(), list);
         urlListView.setAdapter(adapter);
     }
 
