@@ -1,17 +1,13 @@
-# MCS3106
+# Pushthakaya
 
-Mobile computing assignment. 
+Library management system
+
 
 # Includes
 
-1. Assignment1
-2. Assignment2
-3. Assignment3
-4. Assignment4
-5. Assignment5a
-6. Assignment5b
-7. Assignment6
-8. Assignment7
-9. Assignment8
-10. Assignment9
+1. Creates Books
+2. Create Authors
+3. List Books
+4. List Authors
+5. Lending
 
