@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/assignment2_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#e5e5e5"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/list_row_background"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/logo_icon"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/logo_agree"></Button>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/assignment5b_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edit_text_shape"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textColor="#4a4a4a"
+                    android:textColorHint="#FF666666"
+                    android:textCursorDrawable="@null"
+                    android:textSize="18sp"></EditText>
+
+                <EditText
+                    android:id="@+id/assignment5b_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/login_phone_no"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/edit_text_shape"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textColor="#4a4a4a"
+                    android:textColorHint="#FF666666"
+                    android:textCursorDrawable="@null"
+                    android:textSize="18sp"></EditText>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="#333333"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/assignment5b_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/details_button_selector"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/assignment5b_sign_in_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Signin"
+                android:textColor="#FFF"
+                android:textSize="16sp"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/assignment5b_sign_up"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/details_button_selector"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/assignment5b_sign_up_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Signup"
+                android:textColor="#FFF"
+                android:textSize="16sp"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
