@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.mcs.assignment.R;
+import com.mcs.assignment.ui.HomeActivity;
 import com.mcs.assignment.ui.UrlListActivity;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
  */
 public class UrlListAdapter extends BaseAdapter {
 
-    private UrlListActivity urlListActivity;
+    private HomeActivity activity;
     private ArrayList<String> urlList;
 
     // set custom font
@@ -30,11 +31,11 @@ public class UrlListAdapter extends BaseAdapter {
     /**
      * Initialize context variables
      */
-    public UrlListAdapter(UrlListActivity activity, ArrayList<String> urlList) {
-        this.urlListActivity = activity;
+    public UrlListAdapter(HomeActivity activity, ArrayList<String> urlList) {
+        this.activity = activity;
         this.urlList = urlList;
 
-        typeface = Typeface.createFromAsset(urlListActivity.getAssets(), "fonts/vegur_2.otf");
+        typeface = Typeface.createFromAsset(activity.getAssets(), "fonts/vegur_2.otf");
     }
 
     /**
@@ -86,7 +87,7 @@ public class UrlListAdapter extends BaseAdapter {
         final String url = (String) getItem(i);
 
         if (view == null) {
-            LayoutInflater layoutInflater = (LayoutInflater) urlListActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater layoutInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(R.layout.layout_url_list_row, viewGroup, false);
 
             holder = new ViewHolder();

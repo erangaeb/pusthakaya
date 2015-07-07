@@ -29,17 +29,17 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/member_fragment_name_label"
+                    android:id="@+id/lending_fragment_member_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:layout_marginLeft="20dp"
-                    android:text="Name"
+                    android:text="Member"
                     android:textColor="#4a4a4a"
                     android:textSize="18sp"></TextView>
 
                 <EditText
-                    android:id="@+id/member_fragment_name_text"
+                    android:id="@+id/lending_fragment_member_text"
                     android:layout_width="fill_parent"
                     android:layout_height="45dp"
                     android:layout_marginLeft="20dp"
@@ -61,17 +61,17 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/member_fragment_address_label"
+                    android:id="@+id/lending_fragment_book_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:layout_marginLeft="20dp"
-                    android:text="Address"
+                    android:text="Book"
                     android:textColor="#4a4a4a"
                     android:textSize="18sp"></TextView>
 
                 <EditText
-                    android:id="@+id/member_fragment_address_text"
+                    android:id="@+id/lending_fragment_book_text"
                     android:layout_width="fill_parent"
                     android:layout_height="45dp"
                     android:layout_marginLeft="20dp"
@@ -89,29 +89,34 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_marginBottom="20dp"
+                android:visibility="gone"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/member_fragment_phone_label"
+                    android:id="@+id/assignment1_email_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:layout_marginLeft="20dp"
-                    android:text="Phone"
+                    android:text="Email"
                     android:textColor="#4a4a4a"
                     android:textSize="18sp"></TextView>
 
                 <EditText
-                    android:id="@+id/member_fragment_phone_text"
+                    android:id="@+id/assignment1_email_text"
                     android:layout_width="fill_parent"
                     android:layout_height="45dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:background="@drawable/edit_text_shape"
-                    android:inputType="phone"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textEmailAddress"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
+                    android:text="earngaeb@gmail.com"
                     android:textColor="#4a4a4a"
                     android:textCursorDrawable="@null"
                     android:textSize="18sp"></EditText>

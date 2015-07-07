@@ -15,16 +15,14 @@ import com.mcs.assignment.R;
  *
  * @author eranga herath(eranga.herath@pagero.com)
  */
-public class Assignment1Fragment extends android.support.v4.app.Fragment {
+public class BookFragment extends android.support.v4.app.Fragment {
 
     // UI Components
-    private TextView nameTextView;
-    private TextView indexNoTextView;
-    private TextView emailTextView;
+    private TextView titleTextView;
+    private TextView publisherTextView;
 
-    private EditText nameEditText;
-    private EditText indexNoEditText;
-    private EditText emailEditText;
+    private EditText titleEditText;
+    private EditText publisherEditText;
 
     // use custom font here
     private Typeface typeface;
@@ -54,21 +52,17 @@ public class Assignment1Fragment extends android.support.v4.app.Fragment {
      * Initialize UI components
      */
     private void initUi() {
-        nameTextView = (TextView) getActivity().findViewById(R.id.assignment1_name_label);
-        indexNoTextView = (TextView) getActivity().findViewById(R.id.assignment1_index_no_label);
-        emailTextView = (TextView) getActivity().findViewById(R.id.assignment1_email_label);
+        titleTextView = (TextView) getActivity().findViewById(R.id.book_fragment_name_label);
+        publisherTextView = (TextView) getActivity().findViewById(R.id.book_fragment_publisher_label);
 
-        nameTextView.setTypeface(typeface, Typeface.BOLD);
-        indexNoTextView.setTypeface(typeface, Typeface.BOLD);
-        emailTextView.setTypeface(typeface, Typeface.BOLD);
+        titleTextView.setTypeface(typeface, Typeface.BOLD);
+        publisherTextView.setTypeface(typeface, Typeface.BOLD);
 
-        nameEditText = (EditText) getActivity().findViewById(R.id.assignment1_name_text);
-        indexNoEditText = (EditText) getActivity().findViewById(R.id.assignment1_index_no_text);
-        emailEditText = (EditText) getActivity().findViewById(R.id.assignment1_email_text);
+        titleEditText = (EditText) getActivity().findViewById(R.id.book_fragment_name_text);
+        publisherEditText = (EditText) getActivity().findViewById(R.id.book_fragment_publisher_text);
 
-        nameEditText.setTypeface(typeface, Typeface.NORMAL);
-        indexNoEditText.setTypeface(typeface, Typeface.NORMAL);
-        emailEditText.setTypeface(typeface, Typeface.NORMAL);
+        titleEditText.setTypeface(typeface, Typeface.NORMAL);
+        publisherEditText.setTypeface(typeface, Typeface.NORMAL);
     }
 
     /**

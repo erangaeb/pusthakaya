@@ -50,7 +50,7 @@ public class HomeActivity extends FragmentActivity {
 
         initDrawer();
         initDrawerList();
-        loadAssignment1();
+        loadBook();
     }
 
     /**
@@ -133,9 +133,10 @@ public class HomeActivity extends FragmentActivity {
         // need to determine selected item according to the currently selected
         drawerItemList = new ArrayList();
         drawerItemList.add(new DrawerItem("New Book", true));
-        drawerItemList.add(new DrawerItem("New Author", false));
-        drawerItemList.add(new DrawerItem("Author list", false));
-        drawerItemList.add(new DrawerItem("Book list", false));
+        drawerItemList.add(new DrawerItem("New Publisher", false));
+        drawerItemList.add(new DrawerItem("New Member", false));
+        drawerItemList.add(new DrawerItem("Books", false));
+        drawerItemList.add(new DrawerItem("Publishers", false));
         drawerItemList.add(new DrawerItem("Lending", false));
 
         drawerAdapter = new DrawerAdapter(HomeActivity.this, drawerItemList);
@@ -183,15 +184,17 @@ public class HomeActivity extends FragmentActivity {
             }
 
             if (position == 0) {
-                loadAssignment1();
+                loadBook();
             } else if (position == 1) {
-                loadAssignment2();
+                loadPublisher();
             } else if (position == 2) {
-                loadAssignment3();
+                loadMember();
             } else if (position == 3) {
-                loadAssignment4();
+                loadBookList();
             } else if (position == 4) {
-                loadAssignment5a();
+                loadPublisherList();
+            } else if (position == 5) {
+                loadLending();
             }
 
             drawerAdapter.notifyDataSetChanged();
@@ -201,15 +204,15 @@ public class HomeActivity extends FragmentActivity {
     /**
      * Load my sensor list fragment
      */
-    private void loadAssignment1() {
+    private void loadBook() {
         drawerItemList.get(0).setSelected(true);
-        getActionBar().setTitle("Assignment1");
+        getActionBar().setTitle("New book");
 
         // fragment transitions
         // Replace whatever is in the fragment_container view with this fragment,
         // and add the transaction to the back stack so the user can navigate back
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        Assignment1Fragment todayFragment = new Assignment1Fragment();
+        BookFragment todayFragment = new BookFragment();
         transaction.replace(R.id.main, todayFragment);
         transaction.commit();
     }
@@ -217,28 +220,28 @@ public class HomeActivity extends FragmentActivity {
     /**
      * Load my sensor list fragment
      */
-    private void loadAssignment2() {
+    private void loadPublisher() {
         drawerItemList.get(1).setSelected(true);
-        getActionBar().setTitle("Assignment2");
+        getActionBar().setTitle("New publisher");
 
         // fragment transitions
         // Replace whatever is in the fragment_container view with this fragment,
         // and add the transaction to the back stack so the user can navigate back
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        Assignment2Fragment summaryFragment = new Assignment2Fragment();
+        PublisherFragment summaryFragment = new PublisherFragment();
         transaction.replace(R.id.main, summaryFragment);
         transaction.commit();
     }
 
-    private void loadAssignment3() {
+    private void loadMember() {
         drawerItemList.get(2).setSelected(true);
-        getActionBar().setTitle("Assignment3");
+        getActionBar().setTitle("New member");
 
         // fragment transitions
         // Replace whatever is in the fragment_container view with this fragment,
         // and add the transaction to the back stack so the user can navigate back
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        Assignment3Fragment assignment3Fragment = new Assignment3Fragment();
+        MemberFragment assignment3Fragment = new MemberFragment();
         transaction.replace(R.id.main, assignment3Fragment);
         transaction.commit();
     }
@@ -246,29 +249,69 @@ public class HomeActivity extends FragmentActivity {
     /**
      * Load my switch board fragment
      */
-    private void loadAssignment4() {
+    private void loadBookList() {
         drawerItemList.get(3).setSelected(true);
-        getActionBar().setTitle("Assignment4");
+        getActionBar().setTitle("Books");
+
+        // data to populate
+        ArrayList<String> list = new ArrayList();
+        list.add("Java in action");
+        list.add("Clean code");
+        list.add("Scala in action");
+        list.add("Distributed Systems");
 
         // fragment transitions
         // Replace whatever is in the fragment_container view with this fragment,
         // and add the transaction to the back stack so the user can navigate back
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        Assignment4Fragment switchBoardFragment = new Assignment4Fragment();
-        transaction.replace(R.id.main, switchBoardFragment);
+        ListFragment fragment = new ListFragment();
+
+        // set data to fragment
+        Bundle bundle = new Bundle();
+        bundle.putStringArrayList("list", list);
+        fragment.setArguments(bundle);
+
+        transaction.replace(R.id.main, fragment);
         transaction.commit();
     }
 
-    private void loadAssignment5a() {
+    private void loadPublisherList() {
         drawerItemList.get(4).setSelected(true);
-        getActionBar().setTitle("Assignment5a");
+        getActionBar().setTitle("Publishers");
+
+        // data to populate
+        ArrayList<String> list = new ArrayList();
+        list.add("Springer");
+        list.add("British publish");
+        list.add("Creative tech");
+        list.add("Typesafe");
+        list.add("PyCon");
 
         // fragment transitions
         // Replace whatever is in the fragment_container view with this fragment,
         // and add the transaction to the back stack so the user can navigate back
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        Assignment5aFragment assignment5aFragment = new Assignment5aFragment();
-        transaction.replace(R.id.main, assignment5aFragment);
+        ListFragment fragment = new ListFragment();
+
+        // set data to fragment
+        Bundle bundle = new Bundle();
+        bundle.putStringArrayList("list", list);
+        fragment.setArguments(bundle);
+
+        transaction.replace(R.id.main, fragment);
+        transaction.commit();
+    }
+
+    private void loadLending() {
+        drawerItemList.get(5).setSelected(true);
+        getActionBar().setTitle("Lending");
+
+        // fragment transitions
+        // Replace whatever is in the fragment_container view with this fragment,
+        // and add the transaction to the back stack so the user can navigate back
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        LendingFragment fragment = new LendingFragment();
+        transaction.replace(R.id.main, fragment);
         transaction.commit();
     }
 

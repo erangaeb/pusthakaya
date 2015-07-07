@@ -78,7 +78,7 @@ public class UrlListActivity extends Activity {
      * Create url list
      */
     private void initUrlList() {
-        adapter = new UrlListAdapter(this, urlList);
+        //adapter = new UrlListAdapter(geta, urlList);
         urlListView.setAdapter(adapter);
 
         // set up click listener
